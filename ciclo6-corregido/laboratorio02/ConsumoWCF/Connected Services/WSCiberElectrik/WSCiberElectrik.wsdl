@@ -1,0 +1,3076 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="MostrarCategoria">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostrarCategoriaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MostrarCategoriaResult" type="tns:ArrayOfCategoriaBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCategoriaBO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CategoriaBO" nillable="true" type="tns:CategoriaBO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CategoriaBO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="codigo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MostrarCategoriaTodo">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostrarCategoriaTodoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MostrarCategoriaTodoResult" type="tns:ArrayOfCategoriaBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarCategoriaXCodigo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="c" type="tns:CategoriaBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarCategoriaXCodigoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarCategoriaXCodigoResult" type="tns:CategoriaBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarCategoria">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="c" type="tns:CategoriaBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarCategoriaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RegistrarCategoriaResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarCategoria">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="c" type="tns:CategoriaBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarCategoriaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActualizarCategoriaResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarCategoria">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="c" type="tns:CategoriaBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarCategoriaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarCategoriaResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HabilitarCategoria">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="c" type="tns:CategoriaBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HabilitarCategoriaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HabilitarCategoriaResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MostrarCodigoCategoria">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostrarCodigoCategoriaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MostrarCodigoCategoriaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MostrarMarca">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostrarMarcaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MostrarMarcaResult" type="tns:ArrayOfMarcaBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfMarcaBO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MarcaBO" nillable="true" type="tns:MarcaBO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MarcaBO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="codigo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MostrarMarcaTodo">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostrarMarcaTodoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MostrarMarcaTodoResult" type="tns:ArrayOfMarcaBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarMarcaXCodigo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="m" type="tns:MarcaBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarMarcaXCodigoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarMarcaXCodigoResult" type="tns:MarcaBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarMarca">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="m" type="tns:MarcaBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarMarcaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RegistrarMarcaResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarMarca">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="m" type="tns:MarcaBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarMarcaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActualizarMarcaResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarMarca">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="m" type="tns:MarcaBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarMarcaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarMarcaResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HabilitarMarca">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="m" type="tns:MarcaBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HabilitarMarcaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HabilitarMarcaResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MostrarCodigoMarca">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostrarCodigoMarcaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MostrarCodigoMarcaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MostrarProducto">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostrarProductoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MostrarProductoResult" type="tns:ArrayOfProductoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfProductoBO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ProductoBO" nillable="true" type="tns:ProductoBO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ProductoBO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="codigo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="precio" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="cantidad" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="fechaingreso" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="marca" type="tns:MarcaBO" />
+          <s:element minOccurs="0" maxOccurs="1" name="categoria" type="tns:CategoriaBO" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MostrarProductoTodo">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostrarProductoTodoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MostrarProductoTodoResult" type="tns:ArrayOfProductoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarProductoXCodigo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p" type="tns:ProductoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarProductoXCodigoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarProductoXCodigoResult" type="tns:ProductoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarProducto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p" type="tns:ProductoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarProductoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RegistrarProductoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarProducto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p" type="tns:ProductoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarProductoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActualizarProductoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarProducto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p" type="tns:ProductoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarProductoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarProductoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HabilitarProducto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p" type="tns:ProductoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HabilitarProductoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HabilitarProductoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MostrarCodigoProducto">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostrarCodigoProductoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MostrarCodigoProductoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MostrarSexo">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostrarSexoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MostrarSexoResult" type="tns:ArrayOfSexoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSexoBO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SexoBO" nillable="true" type="tns:SexoBO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SexoBO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="codigo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MostrarSexoTodo">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostrarSexoTodoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MostrarSexoTodoResult" type="tns:ArrayOfSexoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarSexoXCodigo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:SexoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarSexoXCodigoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarSexoXCodigoResult" type="tns:SexoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarSexo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:SexoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarSexoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RegistrarSexoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarSexo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:SexoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarSexoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActualizarSexoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarSexo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:SexoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarSexoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarSexoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HabilitarSexo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:SexoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HabilitarSexoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HabilitarSexoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MostrarCodigoSexo">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostrarCodigoSexoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MostrarCodigoSexoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MostrarTipoDocumento">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostrarTipoDocumentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MostrarTipoDocumentoResult" type="tns:ArrayOfTipoDocumentoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfTipoDocumentoBO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TipoDocumentoBO" nillable="true" type="tns:TipoDocumentoBO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TipoDocumentoBO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="codigo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MostrarTipoDocumentoTodo">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostrarTipoDocumentoTodoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MostrarTipoDocumentoTodoResult" type="tns:ArrayOfTipoDocumentoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarTipoDocumentoXCodigo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:TipoDocumentoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarTipoDocumentoXCodigoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarTipoDocumentoXCodigoResult" type="tns:TipoDocumentoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarTipoDocumento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:TipoDocumentoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarTipoDocumentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RegistrarTipoDocumentoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarTipoDocumento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:TipoDocumentoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarTipoDocumentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActualizarTipoDocumentoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarTipoDocumento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:TipoDocumentoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarTipoDocumentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarTipoDocumentoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HabilitarTipoDocumento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:TipoDocumentoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HabilitarTipoDocumentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HabilitarTipoDocumentoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MostrarCodigoTipoDocumento">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostrarCodigoTipoDocumentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MostrarCodigoTipoDocumentoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MostrarRol">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostrarRolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MostrarRolResult" type="tns:ArrayOfRolBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfRolBO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RolBO" nillable="true" type="tns:RolBO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RolBO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="codigo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MostrarRolTodo">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostrarRolTodoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MostrarRolTodoResult" type="tns:ArrayOfRolBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarRolXCodigo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:RolBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarRolXCodigoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarRolXCodigoResult" type="tns:RolBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarRol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:RolBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarRolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RegistrarRolResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarRol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:RolBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarRolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActualizarRolResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarRol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:RolBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarRolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarRolResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HabilitarRol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:RolBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HabilitarRolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HabilitarRolResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MostrarCodigoRol">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostrarCodigoRolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MostrarCodigoRolResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MostrarDistrito">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostrarDistritoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MostrarDistritoResult" type="tns:ArrayOfDistritoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDistritoBO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DistritoBO" nillable="true" type="tns:DistritoBO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DistritoBO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="codigo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MostrarDistritoTodo">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostrarDistritoTodoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MostrarDistritoTodoResult" type="tns:ArrayOfDistritoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarDistritoXCodigo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:DistritoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarDistritoXCodigoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarDistritoXCodigoResult" type="tns:DistritoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarDistrito">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:DistritoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarDistritoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RegistrarDistritoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarDistrito">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:DistritoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarDistritoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActualizarDistritoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarDistrito">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:DistritoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarDistritoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarDistritoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HabilitarDistrito">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:DistritoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HabilitarDistritoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HabilitarDistritoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MostrarCodigoDistrito">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostrarCodigoDistritoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MostrarCodigoDistritoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MostrarEmpleado">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostrarEmpleadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MostrarEmpleadoResult" type="tns:ArrayOfEmpleadoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfEmpleadoBO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EmpleadoBO" nillable="true" type="tns:EmpleadoBO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EmpleadoBO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="codigo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="apellidoPaterno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="apellidoMaterno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="direccion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="telefono" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="celular" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="correo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="clave" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="distrito" type="tns:DistritoBO" />
+          <s:element minOccurs="0" maxOccurs="1" name="rol" type="tns:RolBO" />
+          <s:element minOccurs="0" maxOccurs="1" name="tipoDocumento" type="tns:TipoDocumentoBO" />
+          <s:element minOccurs="0" maxOccurs="1" name="sexo" type="tns:SexoBO" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MostrarEmpleadoTodo">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostrarEmpleadoTodoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MostrarEmpleadoTodoResult" type="tns:ArrayOfEmpleadoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarEmpleadoXCodigo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:EmpleadoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarEmpleadoXCodigoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarEmpleadoXCodigoResult" type="tns:EmpleadoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarEmpleado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:EmpleadoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarEmpleadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RegistrarEmpleadoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarEmpleado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:EmpleadoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarEmpleadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActualizarEmpleadoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarEmpleado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:EmpleadoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarEmpleadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarEmpleadoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HabilitarEmpleado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:EmpleadoBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HabilitarEmpleadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HabilitarEmpleadoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MostrarCodigoEmpleado">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostrarCodigoEmpleadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MostrarCodigoEmpleadoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MostrarCliente">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostrarClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MostrarClienteResult" type="tns:ArrayOfClienteBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfClienteBO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ClienteBO" nillable="true" type="tns:ClienteBO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ClienteBO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="codigo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="apellidoPaterno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="apellidoMaterno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="direccion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="telefono" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="celular" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="correo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="distrito" type="tns:DistritoBO" />
+          <s:element minOccurs="0" maxOccurs="1" name="tipoDocumento" type="tns:TipoDocumentoBO" />
+          <s:element minOccurs="0" maxOccurs="1" name="sexo" type="tns:SexoBO" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MostrarClienteTodo">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostrarClienteTodoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MostrarClienteTodoResult" type="tns:ArrayOfClienteBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarClienteXCodigo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:ClienteBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarClienteXCodigoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarClienteXCodigoResult" type="tns:ClienteBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:ClienteBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RegistrarClienteResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:ClienteBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActualizarClienteResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:ClienteBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarClienteResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HabilitarCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:ClienteBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HabilitarClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HabilitarClienteResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MostrarCodigoCliente">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostrarCodigoClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MostrarCodigoClienteResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="MostrarCategoriaSoapIn">
+    <wsdl:part name="parameters" element="tns:MostrarCategoria" />
+  </wsdl:message>
+  <wsdl:message name="MostrarCategoriaSoapOut">
+    <wsdl:part name="parameters" element="tns:MostrarCategoriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostrarCategoriaTodoSoapIn">
+    <wsdl:part name="parameters" element="tns:MostrarCategoriaTodo" />
+  </wsdl:message>
+  <wsdl:message name="MostrarCategoriaTodoSoapOut">
+    <wsdl:part name="parameters" element="tns:MostrarCategoriaTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarCategoriaXCodigoSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarCategoriaXCodigo" />
+  </wsdl:message>
+  <wsdl:message name="BuscarCategoriaXCodigoSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarCategoriaXCodigoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarCategoriaSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarCategoria" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarCategoriaSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarCategoriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarCategoriaSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizarCategoria" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarCategoriaSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizarCategoriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarCategoriaSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarCategoria" />
+  </wsdl:message>
+  <wsdl:message name="EliminarCategoriaSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarCategoriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="HabilitarCategoriaSoapIn">
+    <wsdl:part name="parameters" element="tns:HabilitarCategoria" />
+  </wsdl:message>
+  <wsdl:message name="HabilitarCategoriaSoapOut">
+    <wsdl:part name="parameters" element="tns:HabilitarCategoriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostrarCodigoCategoriaSoapIn">
+    <wsdl:part name="parameters" element="tns:MostrarCodigoCategoria" />
+  </wsdl:message>
+  <wsdl:message name="MostrarCodigoCategoriaSoapOut">
+    <wsdl:part name="parameters" element="tns:MostrarCodigoCategoriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostrarMarcaSoapIn">
+    <wsdl:part name="parameters" element="tns:MostrarMarca" />
+  </wsdl:message>
+  <wsdl:message name="MostrarMarcaSoapOut">
+    <wsdl:part name="parameters" element="tns:MostrarMarcaResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostrarMarcaTodoSoapIn">
+    <wsdl:part name="parameters" element="tns:MostrarMarcaTodo" />
+  </wsdl:message>
+  <wsdl:message name="MostrarMarcaTodoSoapOut">
+    <wsdl:part name="parameters" element="tns:MostrarMarcaTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarMarcaXCodigoSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarMarcaXCodigo" />
+  </wsdl:message>
+  <wsdl:message name="BuscarMarcaXCodigoSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarMarcaXCodigoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarMarcaSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarMarca" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarMarcaSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarMarcaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarMarcaSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizarMarca" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarMarcaSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizarMarcaResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarMarcaSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarMarca" />
+  </wsdl:message>
+  <wsdl:message name="EliminarMarcaSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarMarcaResponse" />
+  </wsdl:message>
+  <wsdl:message name="HabilitarMarcaSoapIn">
+    <wsdl:part name="parameters" element="tns:HabilitarMarca" />
+  </wsdl:message>
+  <wsdl:message name="HabilitarMarcaSoapOut">
+    <wsdl:part name="parameters" element="tns:HabilitarMarcaResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostrarCodigoMarcaSoapIn">
+    <wsdl:part name="parameters" element="tns:MostrarCodigoMarca" />
+  </wsdl:message>
+  <wsdl:message name="MostrarCodigoMarcaSoapOut">
+    <wsdl:part name="parameters" element="tns:MostrarCodigoMarcaResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostrarProductoSoapIn">
+    <wsdl:part name="parameters" element="tns:MostrarProducto" />
+  </wsdl:message>
+  <wsdl:message name="MostrarProductoSoapOut">
+    <wsdl:part name="parameters" element="tns:MostrarProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostrarProductoTodoSoapIn">
+    <wsdl:part name="parameters" element="tns:MostrarProductoTodo" />
+  </wsdl:message>
+  <wsdl:message name="MostrarProductoTodoSoapOut">
+    <wsdl:part name="parameters" element="tns:MostrarProductoTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarProductoXCodigoSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarProductoXCodigo" />
+  </wsdl:message>
+  <wsdl:message name="BuscarProductoXCodigoSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarProductoXCodigoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarProductoSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarProducto" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarProductoSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarProductoSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizarProducto" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarProductoSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizarProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarProductoSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarProducto" />
+  </wsdl:message>
+  <wsdl:message name="EliminarProductoSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="HabilitarProductoSoapIn">
+    <wsdl:part name="parameters" element="tns:HabilitarProducto" />
+  </wsdl:message>
+  <wsdl:message name="HabilitarProductoSoapOut">
+    <wsdl:part name="parameters" element="tns:HabilitarProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostrarCodigoProductoSoapIn">
+    <wsdl:part name="parameters" element="tns:MostrarCodigoProducto" />
+  </wsdl:message>
+  <wsdl:message name="MostrarCodigoProductoSoapOut">
+    <wsdl:part name="parameters" element="tns:MostrarCodigoProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostrarSexoSoapIn">
+    <wsdl:part name="parameters" element="tns:MostrarSexo" />
+  </wsdl:message>
+  <wsdl:message name="MostrarSexoSoapOut">
+    <wsdl:part name="parameters" element="tns:MostrarSexoResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostrarSexoTodoSoapIn">
+    <wsdl:part name="parameters" element="tns:MostrarSexoTodo" />
+  </wsdl:message>
+  <wsdl:message name="MostrarSexoTodoSoapOut">
+    <wsdl:part name="parameters" element="tns:MostrarSexoTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarSexoXCodigoSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarSexoXCodigo" />
+  </wsdl:message>
+  <wsdl:message name="BuscarSexoXCodigoSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarSexoXCodigoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarSexoSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarSexo" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarSexoSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarSexoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarSexoSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizarSexo" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarSexoSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizarSexoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarSexoSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarSexo" />
+  </wsdl:message>
+  <wsdl:message name="EliminarSexoSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarSexoResponse" />
+  </wsdl:message>
+  <wsdl:message name="HabilitarSexoSoapIn">
+    <wsdl:part name="parameters" element="tns:HabilitarSexo" />
+  </wsdl:message>
+  <wsdl:message name="HabilitarSexoSoapOut">
+    <wsdl:part name="parameters" element="tns:HabilitarSexoResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostrarCodigoSexoSoapIn">
+    <wsdl:part name="parameters" element="tns:MostrarCodigoSexo" />
+  </wsdl:message>
+  <wsdl:message name="MostrarCodigoSexoSoapOut">
+    <wsdl:part name="parameters" element="tns:MostrarCodigoSexoResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostrarTipoDocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:MostrarTipoDocumento" />
+  </wsdl:message>
+  <wsdl:message name="MostrarTipoDocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:MostrarTipoDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostrarTipoDocumentoTodoSoapIn">
+    <wsdl:part name="parameters" element="tns:MostrarTipoDocumentoTodo" />
+  </wsdl:message>
+  <wsdl:message name="MostrarTipoDocumentoTodoSoapOut">
+    <wsdl:part name="parameters" element="tns:MostrarTipoDocumentoTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarTipoDocumentoXCodigoSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarTipoDocumentoXCodigo" />
+  </wsdl:message>
+  <wsdl:message name="BuscarTipoDocumentoXCodigoSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarTipoDocumentoXCodigoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarTipoDocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarTipoDocumento" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarTipoDocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarTipoDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarTipoDocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizarTipoDocumento" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarTipoDocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizarTipoDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarTipoDocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarTipoDocumento" />
+  </wsdl:message>
+  <wsdl:message name="EliminarTipoDocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarTipoDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="HabilitarTipoDocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:HabilitarTipoDocumento" />
+  </wsdl:message>
+  <wsdl:message name="HabilitarTipoDocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:HabilitarTipoDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostrarCodigoTipoDocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:MostrarCodigoTipoDocumento" />
+  </wsdl:message>
+  <wsdl:message name="MostrarCodigoTipoDocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:MostrarCodigoTipoDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostrarRolSoapIn">
+    <wsdl:part name="parameters" element="tns:MostrarRol" />
+  </wsdl:message>
+  <wsdl:message name="MostrarRolSoapOut">
+    <wsdl:part name="parameters" element="tns:MostrarRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostrarRolTodoSoapIn">
+    <wsdl:part name="parameters" element="tns:MostrarRolTodo" />
+  </wsdl:message>
+  <wsdl:message name="MostrarRolTodoSoapOut">
+    <wsdl:part name="parameters" element="tns:MostrarRolTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarRolXCodigoSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarRolXCodigo" />
+  </wsdl:message>
+  <wsdl:message name="BuscarRolXCodigoSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarRolXCodigoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarRolSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarRol" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarRolSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarRolSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizarRol" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarRolSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizarRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarRolSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarRol" />
+  </wsdl:message>
+  <wsdl:message name="EliminarRolSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="HabilitarRolSoapIn">
+    <wsdl:part name="parameters" element="tns:HabilitarRol" />
+  </wsdl:message>
+  <wsdl:message name="HabilitarRolSoapOut">
+    <wsdl:part name="parameters" element="tns:HabilitarRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostrarCodigoRolSoapIn">
+    <wsdl:part name="parameters" element="tns:MostrarCodigoRol" />
+  </wsdl:message>
+  <wsdl:message name="MostrarCodigoRolSoapOut">
+    <wsdl:part name="parameters" element="tns:MostrarCodigoRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostrarDistritoSoapIn">
+    <wsdl:part name="parameters" element="tns:MostrarDistrito" />
+  </wsdl:message>
+  <wsdl:message name="MostrarDistritoSoapOut">
+    <wsdl:part name="parameters" element="tns:MostrarDistritoResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostrarDistritoTodoSoapIn">
+    <wsdl:part name="parameters" element="tns:MostrarDistritoTodo" />
+  </wsdl:message>
+  <wsdl:message name="MostrarDistritoTodoSoapOut">
+    <wsdl:part name="parameters" element="tns:MostrarDistritoTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarDistritoXCodigoSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarDistritoXCodigo" />
+  </wsdl:message>
+  <wsdl:message name="BuscarDistritoXCodigoSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarDistritoXCodigoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarDistritoSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarDistrito" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarDistritoSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarDistritoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarDistritoSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizarDistrito" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarDistritoSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizarDistritoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarDistritoSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarDistrito" />
+  </wsdl:message>
+  <wsdl:message name="EliminarDistritoSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarDistritoResponse" />
+  </wsdl:message>
+  <wsdl:message name="HabilitarDistritoSoapIn">
+    <wsdl:part name="parameters" element="tns:HabilitarDistrito" />
+  </wsdl:message>
+  <wsdl:message name="HabilitarDistritoSoapOut">
+    <wsdl:part name="parameters" element="tns:HabilitarDistritoResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostrarCodigoDistritoSoapIn">
+    <wsdl:part name="parameters" element="tns:MostrarCodigoDistrito" />
+  </wsdl:message>
+  <wsdl:message name="MostrarCodigoDistritoSoapOut">
+    <wsdl:part name="parameters" element="tns:MostrarCodigoDistritoResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostrarEmpleadoSoapIn">
+    <wsdl:part name="parameters" element="tns:MostrarEmpleado" />
+  </wsdl:message>
+  <wsdl:message name="MostrarEmpleadoSoapOut">
+    <wsdl:part name="parameters" element="tns:MostrarEmpleadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostrarEmpleadoTodoSoapIn">
+    <wsdl:part name="parameters" element="tns:MostrarEmpleadoTodo" />
+  </wsdl:message>
+  <wsdl:message name="MostrarEmpleadoTodoSoapOut">
+    <wsdl:part name="parameters" element="tns:MostrarEmpleadoTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarEmpleadoXCodigoSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarEmpleadoXCodigo" />
+  </wsdl:message>
+  <wsdl:message name="BuscarEmpleadoXCodigoSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarEmpleadoXCodigoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarEmpleadoSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarEmpleado" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarEmpleadoSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarEmpleadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarEmpleadoSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizarEmpleado" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarEmpleadoSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizarEmpleadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarEmpleadoSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarEmpleado" />
+  </wsdl:message>
+  <wsdl:message name="EliminarEmpleadoSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarEmpleadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="HabilitarEmpleadoSoapIn">
+    <wsdl:part name="parameters" element="tns:HabilitarEmpleado" />
+  </wsdl:message>
+  <wsdl:message name="HabilitarEmpleadoSoapOut">
+    <wsdl:part name="parameters" element="tns:HabilitarEmpleadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostrarCodigoEmpleadoSoapIn">
+    <wsdl:part name="parameters" element="tns:MostrarCodigoEmpleado" />
+  </wsdl:message>
+  <wsdl:message name="MostrarCodigoEmpleadoSoapOut">
+    <wsdl:part name="parameters" element="tns:MostrarCodigoEmpleadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostrarClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:MostrarCliente" />
+  </wsdl:message>
+  <wsdl:message name="MostrarClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:MostrarClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostrarClienteTodoSoapIn">
+    <wsdl:part name="parameters" element="tns:MostrarClienteTodo" />
+  </wsdl:message>
+  <wsdl:message name="MostrarClienteTodoSoapOut">
+    <wsdl:part name="parameters" element="tns:MostrarClienteTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarClienteXCodigoSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarClienteXCodigo" />
+  </wsdl:message>
+  <wsdl:message name="BuscarClienteXCodigoSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarClienteXCodigoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarCliente" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizarCliente" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizarClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarCliente" />
+  </wsdl:message>
+  <wsdl:message name="EliminarClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="HabilitarClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:HabilitarCliente" />
+  </wsdl:message>
+  <wsdl:message name="HabilitarClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:HabilitarClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostrarCodigoClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:MostrarCodigoCliente" />
+  </wsdl:message>
+  <wsdl:message name="MostrarCodigoClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:MostrarCodigoClienteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WSCiberElectrikSoap">
+    <wsdl:operation name="MostrarCategoria">
+      <wsdl:input message="tns:MostrarCategoriaSoapIn" />
+      <wsdl:output message="tns:MostrarCategoriaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostrarCategoriaTodo">
+      <wsdl:input message="tns:MostrarCategoriaTodoSoapIn" />
+      <wsdl:output message="tns:MostrarCategoriaTodoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarCategoriaXCodigo">
+      <wsdl:input message="tns:BuscarCategoriaXCodigoSoapIn" />
+      <wsdl:output message="tns:BuscarCategoriaXCodigoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarCategoria">
+      <wsdl:input message="tns:RegistrarCategoriaSoapIn" />
+      <wsdl:output message="tns:RegistrarCategoriaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCategoria">
+      <wsdl:input message="tns:ActualizarCategoriaSoapIn" />
+      <wsdl:output message="tns:ActualizarCategoriaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCategoria">
+      <wsdl:input message="tns:EliminarCategoriaSoapIn" />
+      <wsdl:output message="tns:EliminarCategoriaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HabilitarCategoria">
+      <wsdl:input message="tns:HabilitarCategoriaSoapIn" />
+      <wsdl:output message="tns:HabilitarCategoriaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostrarCodigoCategoria">
+      <wsdl:input message="tns:MostrarCodigoCategoriaSoapIn" />
+      <wsdl:output message="tns:MostrarCodigoCategoriaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostrarMarca">
+      <wsdl:input message="tns:MostrarMarcaSoapIn" />
+      <wsdl:output message="tns:MostrarMarcaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostrarMarcaTodo">
+      <wsdl:input message="tns:MostrarMarcaTodoSoapIn" />
+      <wsdl:output message="tns:MostrarMarcaTodoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarMarcaXCodigo">
+      <wsdl:input message="tns:BuscarMarcaXCodigoSoapIn" />
+      <wsdl:output message="tns:BuscarMarcaXCodigoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarMarca">
+      <wsdl:input message="tns:RegistrarMarcaSoapIn" />
+      <wsdl:output message="tns:RegistrarMarcaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarMarca">
+      <wsdl:input message="tns:ActualizarMarcaSoapIn" />
+      <wsdl:output message="tns:ActualizarMarcaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarMarca">
+      <wsdl:input message="tns:EliminarMarcaSoapIn" />
+      <wsdl:output message="tns:EliminarMarcaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HabilitarMarca">
+      <wsdl:input message="tns:HabilitarMarcaSoapIn" />
+      <wsdl:output message="tns:HabilitarMarcaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostrarCodigoMarca">
+      <wsdl:input message="tns:MostrarCodigoMarcaSoapIn" />
+      <wsdl:output message="tns:MostrarCodigoMarcaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostrarProducto">
+      <wsdl:input message="tns:MostrarProductoSoapIn" />
+      <wsdl:output message="tns:MostrarProductoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostrarProductoTodo">
+      <wsdl:input message="tns:MostrarProductoTodoSoapIn" />
+      <wsdl:output message="tns:MostrarProductoTodoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarProductoXCodigo">
+      <wsdl:input message="tns:BuscarProductoXCodigoSoapIn" />
+      <wsdl:output message="tns:BuscarProductoXCodigoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarProducto">
+      <wsdl:input message="tns:RegistrarProductoSoapIn" />
+      <wsdl:output message="tns:RegistrarProductoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarProducto">
+      <wsdl:input message="tns:ActualizarProductoSoapIn" />
+      <wsdl:output message="tns:ActualizarProductoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarProducto">
+      <wsdl:input message="tns:EliminarProductoSoapIn" />
+      <wsdl:output message="tns:EliminarProductoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HabilitarProducto">
+      <wsdl:input message="tns:HabilitarProductoSoapIn" />
+      <wsdl:output message="tns:HabilitarProductoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostrarCodigoProducto">
+      <wsdl:input message="tns:MostrarCodigoProductoSoapIn" />
+      <wsdl:output message="tns:MostrarCodigoProductoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostrarSexo">
+      <wsdl:input message="tns:MostrarSexoSoapIn" />
+      <wsdl:output message="tns:MostrarSexoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostrarSexoTodo">
+      <wsdl:input message="tns:MostrarSexoTodoSoapIn" />
+      <wsdl:output message="tns:MostrarSexoTodoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarSexoXCodigo">
+      <wsdl:input message="tns:BuscarSexoXCodigoSoapIn" />
+      <wsdl:output message="tns:BuscarSexoXCodigoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarSexo">
+      <wsdl:input message="tns:RegistrarSexoSoapIn" />
+      <wsdl:output message="tns:RegistrarSexoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarSexo">
+      <wsdl:input message="tns:ActualizarSexoSoapIn" />
+      <wsdl:output message="tns:ActualizarSexoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarSexo">
+      <wsdl:input message="tns:EliminarSexoSoapIn" />
+      <wsdl:output message="tns:EliminarSexoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HabilitarSexo">
+      <wsdl:input message="tns:HabilitarSexoSoapIn" />
+      <wsdl:output message="tns:HabilitarSexoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostrarCodigoSexo">
+      <wsdl:input message="tns:MostrarCodigoSexoSoapIn" />
+      <wsdl:output message="tns:MostrarCodigoSexoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostrarTipoDocumento">
+      <wsdl:input message="tns:MostrarTipoDocumentoSoapIn" />
+      <wsdl:output message="tns:MostrarTipoDocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostrarTipoDocumentoTodo">
+      <wsdl:input message="tns:MostrarTipoDocumentoTodoSoapIn" />
+      <wsdl:output message="tns:MostrarTipoDocumentoTodoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarTipoDocumentoXCodigo">
+      <wsdl:input message="tns:BuscarTipoDocumentoXCodigoSoapIn" />
+      <wsdl:output message="tns:BuscarTipoDocumentoXCodigoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarTipoDocumento">
+      <wsdl:input message="tns:RegistrarTipoDocumentoSoapIn" />
+      <wsdl:output message="tns:RegistrarTipoDocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarTipoDocumento">
+      <wsdl:input message="tns:ActualizarTipoDocumentoSoapIn" />
+      <wsdl:output message="tns:ActualizarTipoDocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarTipoDocumento">
+      <wsdl:input message="tns:EliminarTipoDocumentoSoapIn" />
+      <wsdl:output message="tns:EliminarTipoDocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HabilitarTipoDocumento">
+      <wsdl:input message="tns:HabilitarTipoDocumentoSoapIn" />
+      <wsdl:output message="tns:HabilitarTipoDocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostrarCodigoTipoDocumento">
+      <wsdl:input message="tns:MostrarCodigoTipoDocumentoSoapIn" />
+      <wsdl:output message="tns:MostrarCodigoTipoDocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostrarRol">
+      <wsdl:input message="tns:MostrarRolSoapIn" />
+      <wsdl:output message="tns:MostrarRolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostrarRolTodo">
+      <wsdl:input message="tns:MostrarRolTodoSoapIn" />
+      <wsdl:output message="tns:MostrarRolTodoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarRolXCodigo">
+      <wsdl:input message="tns:BuscarRolXCodigoSoapIn" />
+      <wsdl:output message="tns:BuscarRolXCodigoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarRol">
+      <wsdl:input message="tns:RegistrarRolSoapIn" />
+      <wsdl:output message="tns:RegistrarRolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarRol">
+      <wsdl:input message="tns:ActualizarRolSoapIn" />
+      <wsdl:output message="tns:ActualizarRolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarRol">
+      <wsdl:input message="tns:EliminarRolSoapIn" />
+      <wsdl:output message="tns:EliminarRolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HabilitarRol">
+      <wsdl:input message="tns:HabilitarRolSoapIn" />
+      <wsdl:output message="tns:HabilitarRolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostrarCodigoRol">
+      <wsdl:input message="tns:MostrarCodigoRolSoapIn" />
+      <wsdl:output message="tns:MostrarCodigoRolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostrarDistrito">
+      <wsdl:input message="tns:MostrarDistritoSoapIn" />
+      <wsdl:output message="tns:MostrarDistritoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostrarDistritoTodo">
+      <wsdl:input message="tns:MostrarDistritoTodoSoapIn" />
+      <wsdl:output message="tns:MostrarDistritoTodoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarDistritoXCodigo">
+      <wsdl:input message="tns:BuscarDistritoXCodigoSoapIn" />
+      <wsdl:output message="tns:BuscarDistritoXCodigoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarDistrito">
+      <wsdl:input message="tns:RegistrarDistritoSoapIn" />
+      <wsdl:output message="tns:RegistrarDistritoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarDistrito">
+      <wsdl:input message="tns:ActualizarDistritoSoapIn" />
+      <wsdl:output message="tns:ActualizarDistritoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarDistrito">
+      <wsdl:input message="tns:EliminarDistritoSoapIn" />
+      <wsdl:output message="tns:EliminarDistritoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HabilitarDistrito">
+      <wsdl:input message="tns:HabilitarDistritoSoapIn" />
+      <wsdl:output message="tns:HabilitarDistritoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostrarCodigoDistrito">
+      <wsdl:input message="tns:MostrarCodigoDistritoSoapIn" />
+      <wsdl:output message="tns:MostrarCodigoDistritoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostrarEmpleado">
+      <wsdl:input message="tns:MostrarEmpleadoSoapIn" />
+      <wsdl:output message="tns:MostrarEmpleadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostrarEmpleadoTodo">
+      <wsdl:input message="tns:MostrarEmpleadoTodoSoapIn" />
+      <wsdl:output message="tns:MostrarEmpleadoTodoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarEmpleadoXCodigo">
+      <wsdl:input message="tns:BuscarEmpleadoXCodigoSoapIn" />
+      <wsdl:output message="tns:BuscarEmpleadoXCodigoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarEmpleado">
+      <wsdl:input message="tns:RegistrarEmpleadoSoapIn" />
+      <wsdl:output message="tns:RegistrarEmpleadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarEmpleado">
+      <wsdl:input message="tns:ActualizarEmpleadoSoapIn" />
+      <wsdl:output message="tns:ActualizarEmpleadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEmpleado">
+      <wsdl:input message="tns:EliminarEmpleadoSoapIn" />
+      <wsdl:output message="tns:EliminarEmpleadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HabilitarEmpleado">
+      <wsdl:input message="tns:HabilitarEmpleadoSoapIn" />
+      <wsdl:output message="tns:HabilitarEmpleadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostrarCodigoEmpleado">
+      <wsdl:input message="tns:MostrarCodigoEmpleadoSoapIn" />
+      <wsdl:output message="tns:MostrarCodigoEmpleadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostrarCliente">
+      <wsdl:input message="tns:MostrarClienteSoapIn" />
+      <wsdl:output message="tns:MostrarClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostrarClienteTodo">
+      <wsdl:input message="tns:MostrarClienteTodoSoapIn" />
+      <wsdl:output message="tns:MostrarClienteTodoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarClienteXCodigo">
+      <wsdl:input message="tns:BuscarClienteXCodigoSoapIn" />
+      <wsdl:output message="tns:BuscarClienteXCodigoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarCliente">
+      <wsdl:input message="tns:RegistrarClienteSoapIn" />
+      <wsdl:output message="tns:RegistrarClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCliente">
+      <wsdl:input message="tns:ActualizarClienteSoapIn" />
+      <wsdl:output message="tns:ActualizarClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCliente">
+      <wsdl:input message="tns:EliminarClienteSoapIn" />
+      <wsdl:output message="tns:EliminarClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HabilitarCliente">
+      <wsdl:input message="tns:HabilitarClienteSoapIn" />
+      <wsdl:output message="tns:HabilitarClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostrarCodigoCliente">
+      <wsdl:input message="tns:MostrarCodigoClienteSoapIn" />
+      <wsdl:output message="tns:MostrarCodigoClienteSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSCiberElectrikSoap" type="tns:WSCiberElectrikSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="MostrarCategoria">
+      <soap:operation soapAction="http://tempuri.org/MostrarCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarCategoriaTodo">
+      <soap:operation soapAction="http://tempuri.org/MostrarCategoriaTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarCategoriaXCodigo">
+      <soap:operation soapAction="http://tempuri.org/BuscarCategoriaXCodigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarCategoria">
+      <soap:operation soapAction="http://tempuri.org/RegistrarCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCategoria">
+      <soap:operation soapAction="http://tempuri.org/ActualizarCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCategoria">
+      <soap:operation soapAction="http://tempuri.org/EliminarCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HabilitarCategoria">
+      <soap:operation soapAction="http://tempuri.org/HabilitarCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarCodigoCategoria">
+      <soap:operation soapAction="http://tempuri.org/MostrarCodigoCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarMarca">
+      <soap:operation soapAction="http://tempuri.org/MostrarMarca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarMarcaTodo">
+      <soap:operation soapAction="http://tempuri.org/MostrarMarcaTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarMarcaXCodigo">
+      <soap:operation soapAction="http://tempuri.org/BuscarMarcaXCodigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarMarca">
+      <soap:operation soapAction="http://tempuri.org/RegistrarMarca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarMarca">
+      <soap:operation soapAction="http://tempuri.org/ActualizarMarca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarMarca">
+      <soap:operation soapAction="http://tempuri.org/EliminarMarca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HabilitarMarca">
+      <soap:operation soapAction="http://tempuri.org/HabilitarMarca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarCodigoMarca">
+      <soap:operation soapAction="http://tempuri.org/MostrarCodigoMarca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarProducto">
+      <soap:operation soapAction="http://tempuri.org/MostrarProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarProductoTodo">
+      <soap:operation soapAction="http://tempuri.org/MostrarProductoTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarProductoXCodigo">
+      <soap:operation soapAction="http://tempuri.org/BuscarProductoXCodigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarProducto">
+      <soap:operation soapAction="http://tempuri.org/RegistrarProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarProducto">
+      <soap:operation soapAction="http://tempuri.org/ActualizarProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarProducto">
+      <soap:operation soapAction="http://tempuri.org/EliminarProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HabilitarProducto">
+      <soap:operation soapAction="http://tempuri.org/HabilitarProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarCodigoProducto">
+      <soap:operation soapAction="http://tempuri.org/MostrarCodigoProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarSexo">
+      <soap:operation soapAction="http://tempuri.org/MostrarSexo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarSexoTodo">
+      <soap:operation soapAction="http://tempuri.org/MostrarSexoTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarSexoXCodigo">
+      <soap:operation soapAction="http://tempuri.org/BuscarSexoXCodigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarSexo">
+      <soap:operation soapAction="http://tempuri.org/RegistrarSexo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarSexo">
+      <soap:operation soapAction="http://tempuri.org/ActualizarSexo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarSexo">
+      <soap:operation soapAction="http://tempuri.org/EliminarSexo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HabilitarSexo">
+      <soap:operation soapAction="http://tempuri.org/HabilitarSexo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarCodigoSexo">
+      <soap:operation soapAction="http://tempuri.org/MostrarCodigoSexo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarTipoDocumento">
+      <soap:operation soapAction="http://tempuri.org/MostrarTipoDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarTipoDocumentoTodo">
+      <soap:operation soapAction="http://tempuri.org/MostrarTipoDocumentoTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarTipoDocumentoXCodigo">
+      <soap:operation soapAction="http://tempuri.org/BuscarTipoDocumentoXCodigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarTipoDocumento">
+      <soap:operation soapAction="http://tempuri.org/RegistrarTipoDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarTipoDocumento">
+      <soap:operation soapAction="http://tempuri.org/ActualizarTipoDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarTipoDocumento">
+      <soap:operation soapAction="http://tempuri.org/EliminarTipoDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HabilitarTipoDocumento">
+      <soap:operation soapAction="http://tempuri.org/HabilitarTipoDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarCodigoTipoDocumento">
+      <soap:operation soapAction="http://tempuri.org/MostrarCodigoTipoDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarRol">
+      <soap:operation soapAction="http://tempuri.org/MostrarRol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarRolTodo">
+      <soap:operation soapAction="http://tempuri.org/MostrarRolTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarRolXCodigo">
+      <soap:operation soapAction="http://tempuri.org/BuscarRolXCodigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarRol">
+      <soap:operation soapAction="http://tempuri.org/RegistrarRol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarRol">
+      <soap:operation soapAction="http://tempuri.org/ActualizarRol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarRol">
+      <soap:operation soapAction="http://tempuri.org/EliminarRol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HabilitarRol">
+      <soap:operation soapAction="http://tempuri.org/HabilitarRol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarCodigoRol">
+      <soap:operation soapAction="http://tempuri.org/MostrarCodigoRol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarDistrito">
+      <soap:operation soapAction="http://tempuri.org/MostrarDistrito" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarDistritoTodo">
+      <soap:operation soapAction="http://tempuri.org/MostrarDistritoTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarDistritoXCodigo">
+      <soap:operation soapAction="http://tempuri.org/BuscarDistritoXCodigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarDistrito">
+      <soap:operation soapAction="http://tempuri.org/RegistrarDistrito" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarDistrito">
+      <soap:operation soapAction="http://tempuri.org/ActualizarDistrito" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarDistrito">
+      <soap:operation soapAction="http://tempuri.org/EliminarDistrito" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HabilitarDistrito">
+      <soap:operation soapAction="http://tempuri.org/HabilitarDistrito" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarCodigoDistrito">
+      <soap:operation soapAction="http://tempuri.org/MostrarCodigoDistrito" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarEmpleado">
+      <soap:operation soapAction="http://tempuri.org/MostrarEmpleado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarEmpleadoTodo">
+      <soap:operation soapAction="http://tempuri.org/MostrarEmpleadoTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarEmpleadoXCodigo">
+      <soap:operation soapAction="http://tempuri.org/BuscarEmpleadoXCodigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarEmpleado">
+      <soap:operation soapAction="http://tempuri.org/RegistrarEmpleado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarEmpleado">
+      <soap:operation soapAction="http://tempuri.org/ActualizarEmpleado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEmpleado">
+      <soap:operation soapAction="http://tempuri.org/EliminarEmpleado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HabilitarEmpleado">
+      <soap:operation soapAction="http://tempuri.org/HabilitarEmpleado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarCodigoEmpleado">
+      <soap:operation soapAction="http://tempuri.org/MostrarCodigoEmpleado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarCliente">
+      <soap:operation soapAction="http://tempuri.org/MostrarCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarClienteTodo">
+      <soap:operation soapAction="http://tempuri.org/MostrarClienteTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarClienteXCodigo">
+      <soap:operation soapAction="http://tempuri.org/BuscarClienteXCodigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarCliente">
+      <soap:operation soapAction="http://tempuri.org/RegistrarCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCliente">
+      <soap:operation soapAction="http://tempuri.org/ActualizarCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCliente">
+      <soap:operation soapAction="http://tempuri.org/EliminarCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HabilitarCliente">
+      <soap:operation soapAction="http://tempuri.org/HabilitarCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarCodigoCliente">
+      <soap:operation soapAction="http://tempuri.org/MostrarCodigoCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSCiberElectrikSoap12" type="tns:WSCiberElectrikSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="MostrarCategoria">
+      <soap12:operation soapAction="http://tempuri.org/MostrarCategoria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarCategoriaTodo">
+      <soap12:operation soapAction="http://tempuri.org/MostrarCategoriaTodo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarCategoriaXCodigo">
+      <soap12:operation soapAction="http://tempuri.org/BuscarCategoriaXCodigo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarCategoria">
+      <soap12:operation soapAction="http://tempuri.org/RegistrarCategoria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCategoria">
+      <soap12:operation soapAction="http://tempuri.org/ActualizarCategoria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCategoria">
+      <soap12:operation soapAction="http://tempuri.org/EliminarCategoria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HabilitarCategoria">
+      <soap12:operation soapAction="http://tempuri.org/HabilitarCategoria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarCodigoCategoria">
+      <soap12:operation soapAction="http://tempuri.org/MostrarCodigoCategoria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarMarca">
+      <soap12:operation soapAction="http://tempuri.org/MostrarMarca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarMarcaTodo">
+      <soap12:operation soapAction="http://tempuri.org/MostrarMarcaTodo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarMarcaXCodigo">
+      <soap12:operation soapAction="http://tempuri.org/BuscarMarcaXCodigo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarMarca">
+      <soap12:operation soapAction="http://tempuri.org/RegistrarMarca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarMarca">
+      <soap12:operation soapAction="http://tempuri.org/ActualizarMarca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarMarca">
+      <soap12:operation soapAction="http://tempuri.org/EliminarMarca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HabilitarMarca">
+      <soap12:operation soapAction="http://tempuri.org/HabilitarMarca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarCodigoMarca">
+      <soap12:operation soapAction="http://tempuri.org/MostrarCodigoMarca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarProducto">
+      <soap12:operation soapAction="http://tempuri.org/MostrarProducto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarProductoTodo">
+      <soap12:operation soapAction="http://tempuri.org/MostrarProductoTodo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarProductoXCodigo">
+      <soap12:operation soapAction="http://tempuri.org/BuscarProductoXCodigo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarProducto">
+      <soap12:operation soapAction="http://tempuri.org/RegistrarProducto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarProducto">
+      <soap12:operation soapAction="http://tempuri.org/ActualizarProducto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarProducto">
+      <soap12:operation soapAction="http://tempuri.org/EliminarProducto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HabilitarProducto">
+      <soap12:operation soapAction="http://tempuri.org/HabilitarProducto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarCodigoProducto">
+      <soap12:operation soapAction="http://tempuri.org/MostrarCodigoProducto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarSexo">
+      <soap12:operation soapAction="http://tempuri.org/MostrarSexo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarSexoTodo">
+      <soap12:operation soapAction="http://tempuri.org/MostrarSexoTodo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarSexoXCodigo">
+      <soap12:operation soapAction="http://tempuri.org/BuscarSexoXCodigo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarSexo">
+      <soap12:operation soapAction="http://tempuri.org/RegistrarSexo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarSexo">
+      <soap12:operation soapAction="http://tempuri.org/ActualizarSexo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarSexo">
+      <soap12:operation soapAction="http://tempuri.org/EliminarSexo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HabilitarSexo">
+      <soap12:operation soapAction="http://tempuri.org/HabilitarSexo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarCodigoSexo">
+      <soap12:operation soapAction="http://tempuri.org/MostrarCodigoSexo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarTipoDocumento">
+      <soap12:operation soapAction="http://tempuri.org/MostrarTipoDocumento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarTipoDocumentoTodo">
+      <soap12:operation soapAction="http://tempuri.org/MostrarTipoDocumentoTodo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarTipoDocumentoXCodigo">
+      <soap12:operation soapAction="http://tempuri.org/BuscarTipoDocumentoXCodigo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarTipoDocumento">
+      <soap12:operation soapAction="http://tempuri.org/RegistrarTipoDocumento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarTipoDocumento">
+      <soap12:operation soapAction="http://tempuri.org/ActualizarTipoDocumento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarTipoDocumento">
+      <soap12:operation soapAction="http://tempuri.org/EliminarTipoDocumento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HabilitarTipoDocumento">
+      <soap12:operation soapAction="http://tempuri.org/HabilitarTipoDocumento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarCodigoTipoDocumento">
+      <soap12:operation soapAction="http://tempuri.org/MostrarCodigoTipoDocumento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarRol">
+      <soap12:operation soapAction="http://tempuri.org/MostrarRol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarRolTodo">
+      <soap12:operation soapAction="http://tempuri.org/MostrarRolTodo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarRolXCodigo">
+      <soap12:operation soapAction="http://tempuri.org/BuscarRolXCodigo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarRol">
+      <soap12:operation soapAction="http://tempuri.org/RegistrarRol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarRol">
+      <soap12:operation soapAction="http://tempuri.org/ActualizarRol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarRol">
+      <soap12:operation soapAction="http://tempuri.org/EliminarRol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HabilitarRol">
+      <soap12:operation soapAction="http://tempuri.org/HabilitarRol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarCodigoRol">
+      <soap12:operation soapAction="http://tempuri.org/MostrarCodigoRol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarDistrito">
+      <soap12:operation soapAction="http://tempuri.org/MostrarDistrito" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarDistritoTodo">
+      <soap12:operation soapAction="http://tempuri.org/MostrarDistritoTodo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarDistritoXCodigo">
+      <soap12:operation soapAction="http://tempuri.org/BuscarDistritoXCodigo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarDistrito">
+      <soap12:operation soapAction="http://tempuri.org/RegistrarDistrito" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarDistrito">
+      <soap12:operation soapAction="http://tempuri.org/ActualizarDistrito" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarDistrito">
+      <soap12:operation soapAction="http://tempuri.org/EliminarDistrito" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HabilitarDistrito">
+      <soap12:operation soapAction="http://tempuri.org/HabilitarDistrito" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarCodigoDistrito">
+      <soap12:operation soapAction="http://tempuri.org/MostrarCodigoDistrito" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarEmpleado">
+      <soap12:operation soapAction="http://tempuri.org/MostrarEmpleado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarEmpleadoTodo">
+      <soap12:operation soapAction="http://tempuri.org/MostrarEmpleadoTodo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarEmpleadoXCodigo">
+      <soap12:operation soapAction="http://tempuri.org/BuscarEmpleadoXCodigo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarEmpleado">
+      <soap12:operation soapAction="http://tempuri.org/RegistrarEmpleado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarEmpleado">
+      <soap12:operation soapAction="http://tempuri.org/ActualizarEmpleado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEmpleado">
+      <soap12:operation soapAction="http://tempuri.org/EliminarEmpleado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HabilitarEmpleado">
+      <soap12:operation soapAction="http://tempuri.org/HabilitarEmpleado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarCodigoEmpleado">
+      <soap12:operation soapAction="http://tempuri.org/MostrarCodigoEmpleado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarCliente">
+      <soap12:operation soapAction="http://tempuri.org/MostrarCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarClienteTodo">
+      <soap12:operation soapAction="http://tempuri.org/MostrarClienteTodo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarClienteXCodigo">
+      <soap12:operation soapAction="http://tempuri.org/BuscarClienteXCodigo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarCliente">
+      <soap12:operation soapAction="http://tempuri.org/RegistrarCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCliente">
+      <soap12:operation soapAction="http://tempuri.org/ActualizarCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCliente">
+      <soap12:operation soapAction="http://tempuri.org/EliminarCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HabilitarCliente">
+      <soap12:operation soapAction="http://tempuri.org/HabilitarCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarCodigoCliente">
+      <soap12:operation soapAction="http://tempuri.org/MostrarCodigoCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSCiberElectrik">
+    <wsdl:port name="WSCiberElectrikSoap" binding="tns:WSCiberElectrikSoap">
+      <soap:address location="https://localhost:44361/WSCiberElectrik.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSCiberElectrikSoap12" binding="tns:WSCiberElectrikSoap12">
+      <soap12:address location="https://localhost:44361/WSCiberElectrik.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

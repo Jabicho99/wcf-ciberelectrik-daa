@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://localhost:44360/WCFCiberElectrik.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" />
+  <xs:element name="clientefindAll">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="clientefindAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="clientefindAllResult" nillable="true" type="q1:ArrayOfClienteBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="clientefindAllCustom">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="clientefindAllCustomResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="clientefindAllCustomResult" nillable="true" type="q2:ArrayOfClienteBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="clientefindById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="obj" nillable="true" type="q3:ClienteBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="clientefindByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="clientefindByIdResult" nillable="true" type="q4:ClienteBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="clienteadd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="obj" nillable="true" type="q5:ClienteBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="clienteaddResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="clienteaddResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="clienteupdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="obj" nillable="true" type="q6:ClienteBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="clienteupdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="clienteupdateResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="clientedelete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="obj" nillable="true" type="q7:ClienteBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="clientedeleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="clientedeleteResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="clienteenable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="obj" nillable="true" type="q8:ClienteBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="clienteenableResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="clienteenableResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="clientesetCode">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="clientesetCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="clientesetCodeResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="empleadofindAll">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="empleadofindAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="empleadofindAllResult" nillable="true" type="q9:ArrayOfEmpleadoBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="empleadofindAllCustom">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="empleadofindAllCustomResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="empleadofindAllCustomResult" nillable="true" type="q10:ArrayOfEmpleadoBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="empleadofindById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="obj" nillable="true" type="q11:EmpleadoBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="empleadofindByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="empleadofindByIdResult" nillable="true" type="q12:EmpleadoBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="empleadoadd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="obj" nillable="true" type="q13:EmpleadoBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="empleadoaddResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="empleadoaddResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="empleadoupdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="obj" nillable="true" type="q14:EmpleadoBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="empleadoupdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="empleadoupdateResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="empleadodelete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="obj" nillable="true" type="q15:EmpleadoBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="empleadodeleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="empleadodeleteResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="empleadoenable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="obj" nillable="true" type="q16:EmpleadoBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="empleadoenableResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="empleadoenableResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="empleadosetCode">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="empleadosetCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="empleadosetCodeResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="distritofindAll">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="distritofindAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="distritofindAllResult" nillable="true" type="q17:ArrayOfDistritoBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="distritofindAllCustom">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="distritofindAllCustomResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="distritofindAllCustomResult" nillable="true" type="q18:ArrayOfDistritoBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="distritofindById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="obj" nillable="true" type="q19:DistritoBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="distritofindByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="distritofindByIdResult" nillable="true" type="q20:DistritoBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="distritoadd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="obj" nillable="true" type="q21:DistritoBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="distritoaddResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="distritoaddResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="distritoupdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="obj" nillable="true" type="q22:DistritoBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="distritoupdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="distritoupdateResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="distritodelete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="obj" nillable="true" type="q23:DistritoBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="distritodeleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="distritodeleteResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="distritoenable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="obj" nillable="true" type="q24:DistritoBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="distritoenableResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="distritoenableResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="distritosetCode">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="distritosetCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="distritosetCodeResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="rolinstFindAll">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="rolinstFindAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="rolinstFindAllResult" nillable="true" type="q25:ArrayOfRolBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="rolinstFindAllCustom">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="rolinstFindAllCustomResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="rolinstFindAllCustomResult" nillable="true" type="q26:ArrayOfRolBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="rolinstFindById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="obj" nillable="true" type="q27:RolBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="rolinstFindByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="rolinstFindByIdResult" nillable="true" type="q28:RolBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="rolinstAdd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="obj" nillable="true" type="q29:RolBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="rolinstAddResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="rolinstAddResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="rolinstUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="obj" nillable="true" type="q30:RolBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="rolinstUpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="rolinstUpdateResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="rolinstDelete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="obj" nillable="true" type="q31:RolBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="rolinstDeleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="rolinstDeleteResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="rolinstEnable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="obj" nillable="true" type="q32:RolBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="rolinstEnableResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="rolinstEnableResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="rolinstSetCode">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="rolinstSetCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="rolinstSetCodeResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sexofindAll">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sexofindAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="sexofindAllResult" nillable="true" type="q33:ArrayOfSexoBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sexofindAllCustom">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sexofindAllCustomResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="sexofindAllCustomResult" nillable="true" type="q34:ArrayOfSexoBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sexofindById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="obj" nillable="true" type="q35:SexoBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sexofindByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="sexofindByIdResult" nillable="true" type="q36:SexoBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sexoadd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="obj" nillable="true" type="q37:SexoBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sexoaddResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sexoaddResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sexoupdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="obj" nillable="true" type="q38:SexoBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sexoupdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sexoupdateResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sexodelete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="obj" nillable="true" type="q39:SexoBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sexodeleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sexodeleteResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sexoenable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="obj" nillable="true" type="q40:SexoBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sexoenableResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sexoenableResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sexosetCode">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sexosetCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sexosetCodeResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tipodocumentofindAll">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tipodocumentofindAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="tipodocumentofindAllResult" nillable="true" type="q41:ArrayOfTipoDocumentoBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tipodocumentofindAllCustom">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tipodocumentofindAllCustomResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="tipodocumentofindAllCustomResult" nillable="true" type="q42:ArrayOfTipoDocumentoBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tipodocumentofindById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="obj" nillable="true" type="q43:TipoDocumentoBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tipodocumentofindByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="tipodocumentofindByIdResult" nillable="true" type="q44:TipoDocumentoBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tipodocumentoadd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="obj" nillable="true" type="q45:TipoDocumentoBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tipodocumentoaddResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tipodocumentoaddResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tipodocumentoupdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="obj" nillable="true" type="q46:TipoDocumentoBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tipodocumentoupdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tipodocumentoupdateResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tipodocumentodelete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="obj" nillable="true" type="q47:TipoDocumentoBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tipodocumentodeleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tipodocumentodeleteResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tipodocumentoenable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" minOccurs="0" name="obj" nillable="true" type="q48:TipoDocumentoBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tipodocumentoenableResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tipodocumentoenableResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tipodocumentosetCode">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tipodocumentosetCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tipodocumentosetCodeResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,932 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="WCFCiberElectrik" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="https://localhost:44360/WCFCiberElectrik.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="https://localhost:44360/WCFCiberElectrik.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://localhost:44360/WCFCiberElectrik.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/pe.com.ciberelectrik.bo" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWCFCiberElectrik_clientefindAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:clientefindAll" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_clientefindAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:clientefindAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_clientefindAllCustom_InputMessage">
+    <wsdl:part name="parameters" element="tns:clientefindAllCustom" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_clientefindAllCustom_OutputMessage">
+    <wsdl:part name="parameters" element="tns:clientefindAllCustomResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_clientefindById_InputMessage">
+    <wsdl:part name="parameters" element="tns:clientefindById" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_clientefindById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:clientefindByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_clienteadd_InputMessage">
+    <wsdl:part name="parameters" element="tns:clienteadd" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_clienteadd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:clienteaddResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_clienteupdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:clienteupdate" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_clienteupdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:clienteupdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_clientedelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:clientedelete" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_clientedelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:clientedeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_clienteenable_InputMessage">
+    <wsdl:part name="parameters" element="tns:clienteenable" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_clienteenable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:clienteenableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_clientesetCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:clientesetCode" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_clientesetCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:clientesetCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_empleadofindAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:empleadofindAll" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_empleadofindAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:empleadofindAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_empleadofindAllCustom_InputMessage">
+    <wsdl:part name="parameters" element="tns:empleadofindAllCustom" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_empleadofindAllCustom_OutputMessage">
+    <wsdl:part name="parameters" element="tns:empleadofindAllCustomResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_empleadofindById_InputMessage">
+    <wsdl:part name="parameters" element="tns:empleadofindById" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_empleadofindById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:empleadofindByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_empleadoadd_InputMessage">
+    <wsdl:part name="parameters" element="tns:empleadoadd" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_empleadoadd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:empleadoaddResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_empleadoupdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:empleadoupdate" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_empleadoupdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:empleadoupdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_empleadodelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:empleadodelete" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_empleadodelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:empleadodeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_empleadoenable_InputMessage">
+    <wsdl:part name="parameters" element="tns:empleadoenable" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_empleadoenable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:empleadoenableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_empleadosetCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:empleadosetCode" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_empleadosetCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:empleadosetCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_distritofindAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:distritofindAll" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_distritofindAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:distritofindAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_distritofindAllCustom_InputMessage">
+    <wsdl:part name="parameters" element="tns:distritofindAllCustom" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_distritofindAllCustom_OutputMessage">
+    <wsdl:part name="parameters" element="tns:distritofindAllCustomResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_distritofindById_InputMessage">
+    <wsdl:part name="parameters" element="tns:distritofindById" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_distritofindById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:distritofindByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_distritoadd_InputMessage">
+    <wsdl:part name="parameters" element="tns:distritoadd" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_distritoadd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:distritoaddResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_distritoupdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:distritoupdate" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_distritoupdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:distritoupdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_distritodelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:distritodelete" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_distritodelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:distritodeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_distritoenable_InputMessage">
+    <wsdl:part name="parameters" element="tns:distritoenable" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_distritoenable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:distritoenableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_distritosetCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:distritosetCode" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_distritosetCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:distritosetCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_rolinstFindAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:rolinstFindAll" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_rolinstFindAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:rolinstFindAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_rolinstFindAllCustom_InputMessage">
+    <wsdl:part name="parameters" element="tns:rolinstFindAllCustom" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_rolinstFindAllCustom_OutputMessage">
+    <wsdl:part name="parameters" element="tns:rolinstFindAllCustomResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_rolinstFindById_InputMessage">
+    <wsdl:part name="parameters" element="tns:rolinstFindById" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_rolinstFindById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:rolinstFindByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_rolinstAdd_InputMessage">
+    <wsdl:part name="parameters" element="tns:rolinstAdd" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_rolinstAdd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:rolinstAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_rolinstUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:rolinstUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_rolinstUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:rolinstUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_rolinstDelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:rolinstDelete" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_rolinstDelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:rolinstDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_rolinstEnable_InputMessage">
+    <wsdl:part name="parameters" element="tns:rolinstEnable" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_rolinstEnable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:rolinstEnableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_rolinstSetCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:rolinstSetCode" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_rolinstSetCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:rolinstSetCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_sexofindAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:sexofindAll" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_sexofindAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sexofindAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_sexofindAllCustom_InputMessage">
+    <wsdl:part name="parameters" element="tns:sexofindAllCustom" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_sexofindAllCustom_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sexofindAllCustomResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_sexofindById_InputMessage">
+    <wsdl:part name="parameters" element="tns:sexofindById" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_sexofindById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sexofindByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_sexoadd_InputMessage">
+    <wsdl:part name="parameters" element="tns:sexoadd" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_sexoadd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sexoaddResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_sexoupdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:sexoupdate" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_sexoupdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sexoupdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_sexodelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:sexodelete" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_sexodelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sexodeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_sexoenable_InputMessage">
+    <wsdl:part name="parameters" element="tns:sexoenable" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_sexoenable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sexoenableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_sexosetCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:sexosetCode" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_sexosetCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sexosetCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_tipodocumentofindAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:tipodocumentofindAll" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_tipodocumentofindAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:tipodocumentofindAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_tipodocumentofindAllCustom_InputMessage">
+    <wsdl:part name="parameters" element="tns:tipodocumentofindAllCustom" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_tipodocumentofindAllCustom_OutputMessage">
+    <wsdl:part name="parameters" element="tns:tipodocumentofindAllCustomResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_tipodocumentofindById_InputMessage">
+    <wsdl:part name="parameters" element="tns:tipodocumentofindById" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_tipodocumentofindById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:tipodocumentofindByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_tipodocumentoadd_InputMessage">
+    <wsdl:part name="parameters" element="tns:tipodocumentoadd" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_tipodocumentoadd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:tipodocumentoaddResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_tipodocumentoupdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:tipodocumentoupdate" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_tipodocumentoupdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:tipodocumentoupdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_tipodocumentodelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:tipodocumentodelete" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_tipodocumentodelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:tipodocumentodeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_tipodocumentoenable_InputMessage">
+    <wsdl:part name="parameters" element="tns:tipodocumentoenable" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_tipodocumentoenable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:tipodocumentoenableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_tipodocumentosetCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:tipodocumentosetCode" />
+  </wsdl:message>
+  <wsdl:message name="IWCFCiberElectrik_tipodocumentosetCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:tipodocumentosetCodeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWCFCiberElectrik">
+    <wsdl:operation name="clientefindAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/clientefindAll" message="tns:IWCFCiberElectrik_clientefindAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/clientefindAllResponse" message="tns:IWCFCiberElectrik_clientefindAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="clientefindAllCustom">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/clientefindAllCustom" message="tns:IWCFCiberElectrik_clientefindAllCustom_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/clientefindAllCustomResponse" message="tns:IWCFCiberElectrik_clientefindAllCustom_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="clientefindById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/clientefindById" message="tns:IWCFCiberElectrik_clientefindById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/clientefindByIdResponse" message="tns:IWCFCiberElectrik_clientefindById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="clienteadd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/clienteadd" message="tns:IWCFCiberElectrik_clienteadd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/clienteaddResponse" message="tns:IWCFCiberElectrik_clienteadd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="clienteupdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/clienteupdate" message="tns:IWCFCiberElectrik_clienteupdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/clienteupdateResponse" message="tns:IWCFCiberElectrik_clienteupdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="clientedelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/clientedelete" message="tns:IWCFCiberElectrik_clientedelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/clientedeleteResponse" message="tns:IWCFCiberElectrik_clientedelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="clienteenable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/clienteenable" message="tns:IWCFCiberElectrik_clienteenable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/clienteenableResponse" message="tns:IWCFCiberElectrik_clienteenable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="clientesetCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/clientesetCode" message="tns:IWCFCiberElectrik_clientesetCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/clientesetCodeResponse" message="tns:IWCFCiberElectrik_clientesetCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="empleadofindAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/empleadofindAll" message="tns:IWCFCiberElectrik_empleadofindAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/empleadofindAllResponse" message="tns:IWCFCiberElectrik_empleadofindAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="empleadofindAllCustom">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/empleadofindAllCustom" message="tns:IWCFCiberElectrik_empleadofindAllCustom_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/empleadofindAllCustomResponse" message="tns:IWCFCiberElectrik_empleadofindAllCustom_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="empleadofindById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/empleadofindById" message="tns:IWCFCiberElectrik_empleadofindById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/empleadofindByIdResponse" message="tns:IWCFCiberElectrik_empleadofindById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="empleadoadd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/empleadoadd" message="tns:IWCFCiberElectrik_empleadoadd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/empleadoaddResponse" message="tns:IWCFCiberElectrik_empleadoadd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="empleadoupdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/empleadoupdate" message="tns:IWCFCiberElectrik_empleadoupdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/empleadoupdateResponse" message="tns:IWCFCiberElectrik_empleadoupdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="empleadodelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/empleadodelete" message="tns:IWCFCiberElectrik_empleadodelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/empleadodeleteResponse" message="tns:IWCFCiberElectrik_empleadodelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="empleadoenable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/empleadoenable" message="tns:IWCFCiberElectrik_empleadoenable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/empleadoenableResponse" message="tns:IWCFCiberElectrik_empleadoenable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="empleadosetCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/empleadosetCode" message="tns:IWCFCiberElectrik_empleadosetCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/empleadosetCodeResponse" message="tns:IWCFCiberElectrik_empleadosetCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="distritofindAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/distritofindAll" message="tns:IWCFCiberElectrik_distritofindAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/distritofindAllResponse" message="tns:IWCFCiberElectrik_distritofindAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="distritofindAllCustom">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/distritofindAllCustom" message="tns:IWCFCiberElectrik_distritofindAllCustom_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/distritofindAllCustomResponse" message="tns:IWCFCiberElectrik_distritofindAllCustom_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="distritofindById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/distritofindById" message="tns:IWCFCiberElectrik_distritofindById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/distritofindByIdResponse" message="tns:IWCFCiberElectrik_distritofindById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="distritoadd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/distritoadd" message="tns:IWCFCiberElectrik_distritoadd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/distritoaddResponse" message="tns:IWCFCiberElectrik_distritoadd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="distritoupdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/distritoupdate" message="tns:IWCFCiberElectrik_distritoupdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/distritoupdateResponse" message="tns:IWCFCiberElectrik_distritoupdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="distritodelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/distritodelete" message="tns:IWCFCiberElectrik_distritodelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/distritodeleteResponse" message="tns:IWCFCiberElectrik_distritodelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="distritoenable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/distritoenable" message="tns:IWCFCiberElectrik_distritoenable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/distritoenableResponse" message="tns:IWCFCiberElectrik_distritoenable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="distritosetCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/distritosetCode" message="tns:IWCFCiberElectrik_distritosetCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/distritosetCodeResponse" message="tns:IWCFCiberElectrik_distritosetCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="rolinstFindAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/rolinstFindAll" message="tns:IWCFCiberElectrik_rolinstFindAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/rolinstFindAllResponse" message="tns:IWCFCiberElectrik_rolinstFindAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="rolinstFindAllCustom">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/rolinstFindAllCustom" message="tns:IWCFCiberElectrik_rolinstFindAllCustom_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/rolinstFindAllCustomResponse" message="tns:IWCFCiberElectrik_rolinstFindAllCustom_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="rolinstFindById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/rolinstFindById" message="tns:IWCFCiberElectrik_rolinstFindById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/rolinstFindByIdResponse" message="tns:IWCFCiberElectrik_rolinstFindById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="rolinstAdd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/rolinstAdd" message="tns:IWCFCiberElectrik_rolinstAdd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/rolinstAddResponse" message="tns:IWCFCiberElectrik_rolinstAdd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="rolinstUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/rolinstUpdate" message="tns:IWCFCiberElectrik_rolinstUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/rolinstUpdateResponse" message="tns:IWCFCiberElectrik_rolinstUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="rolinstDelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/rolinstDelete" message="tns:IWCFCiberElectrik_rolinstDelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/rolinstDeleteResponse" message="tns:IWCFCiberElectrik_rolinstDelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="rolinstEnable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/rolinstEnable" message="tns:IWCFCiberElectrik_rolinstEnable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/rolinstEnableResponse" message="tns:IWCFCiberElectrik_rolinstEnable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="rolinstSetCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/rolinstSetCode" message="tns:IWCFCiberElectrik_rolinstSetCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/rolinstSetCodeResponse" message="tns:IWCFCiberElectrik_rolinstSetCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sexofindAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/sexofindAll" message="tns:IWCFCiberElectrik_sexofindAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/sexofindAllResponse" message="tns:IWCFCiberElectrik_sexofindAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sexofindAllCustom">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/sexofindAllCustom" message="tns:IWCFCiberElectrik_sexofindAllCustom_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/sexofindAllCustomResponse" message="tns:IWCFCiberElectrik_sexofindAllCustom_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sexofindById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/sexofindById" message="tns:IWCFCiberElectrik_sexofindById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/sexofindByIdResponse" message="tns:IWCFCiberElectrik_sexofindById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sexoadd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/sexoadd" message="tns:IWCFCiberElectrik_sexoadd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/sexoaddResponse" message="tns:IWCFCiberElectrik_sexoadd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sexoupdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/sexoupdate" message="tns:IWCFCiberElectrik_sexoupdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/sexoupdateResponse" message="tns:IWCFCiberElectrik_sexoupdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sexodelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/sexodelete" message="tns:IWCFCiberElectrik_sexodelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/sexodeleteResponse" message="tns:IWCFCiberElectrik_sexodelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sexoenable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/sexoenable" message="tns:IWCFCiberElectrik_sexoenable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/sexoenableResponse" message="tns:IWCFCiberElectrik_sexoenable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sexosetCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/sexosetCode" message="tns:IWCFCiberElectrik_sexosetCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/sexosetCodeResponse" message="tns:IWCFCiberElectrik_sexosetCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="tipodocumentofindAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/tipodocumentofindAll" message="tns:IWCFCiberElectrik_tipodocumentofindAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/tipodocumentofindAllResponse" message="tns:IWCFCiberElectrik_tipodocumentofindAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="tipodocumentofindAllCustom">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/tipodocumentofindAllCustom" message="tns:IWCFCiberElectrik_tipodocumentofindAllCustom_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/tipodocumentofindAllCustomResponse" message="tns:IWCFCiberElectrik_tipodocumentofindAllCustom_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="tipodocumentofindById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/tipodocumentofindById" message="tns:IWCFCiberElectrik_tipodocumentofindById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/tipodocumentofindByIdResponse" message="tns:IWCFCiberElectrik_tipodocumentofindById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="tipodocumentoadd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/tipodocumentoadd" message="tns:IWCFCiberElectrik_tipodocumentoadd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/tipodocumentoaddResponse" message="tns:IWCFCiberElectrik_tipodocumentoadd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="tipodocumentoupdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/tipodocumentoupdate" message="tns:IWCFCiberElectrik_tipodocumentoupdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/tipodocumentoupdateResponse" message="tns:IWCFCiberElectrik_tipodocumentoupdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="tipodocumentodelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/tipodocumentodelete" message="tns:IWCFCiberElectrik_tipodocumentodelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/tipodocumentodeleteResponse" message="tns:IWCFCiberElectrik_tipodocumentodelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="tipodocumentoenable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/tipodocumentoenable" message="tns:IWCFCiberElectrik_tipodocumentoenable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/tipodocumentoenableResponse" message="tns:IWCFCiberElectrik_tipodocumentoenable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="tipodocumentosetCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFCiberElectrik/tipodocumentosetCode" message="tns:IWCFCiberElectrik_tipodocumentosetCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFCiberElectrik/tipodocumentosetCodeResponse" message="tns:IWCFCiberElectrik_tipodocumentosetCode_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWCFCiberElectrik" type="tns:IWCFCiberElectrik">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="clientefindAll">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/clientefindAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="clientefindAllCustom">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/clientefindAllCustom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="clientefindById">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/clientefindById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="clienteadd">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/clienteadd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="clienteupdate">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/clienteupdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="clientedelete">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/clientedelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="clienteenable">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/clienteenable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="clientesetCode">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/clientesetCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="empleadofindAll">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/empleadofindAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="empleadofindAllCustom">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/empleadofindAllCustom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="empleadofindById">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/empleadofindById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="empleadoadd">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/empleadoadd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="empleadoupdate">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/empleadoupdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="empleadodelete">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/empleadodelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="empleadoenable">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/empleadoenable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="empleadosetCode">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/empleadosetCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="distritofindAll">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/distritofindAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="distritofindAllCustom">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/distritofindAllCustom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="distritofindById">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/distritofindById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="distritoadd">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/distritoadd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="distritoupdate">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/distritoupdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="distritodelete">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/distritodelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="distritoenable">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/distritoenable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="distritosetCode">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/distritosetCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rolinstFindAll">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/rolinstFindAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rolinstFindAllCustom">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/rolinstFindAllCustom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rolinstFindById">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/rolinstFindById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rolinstAdd">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/rolinstAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rolinstUpdate">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/rolinstUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rolinstDelete">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/rolinstDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rolinstEnable">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/rolinstEnable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rolinstSetCode">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/rolinstSetCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sexofindAll">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/sexofindAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sexofindAllCustom">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/sexofindAllCustom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sexofindById">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/sexofindById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sexoadd">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/sexoadd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sexoupdate">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/sexoupdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sexodelete">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/sexodelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sexoenable">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/sexoenable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sexosetCode">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/sexosetCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tipodocumentofindAll">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/tipodocumentofindAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tipodocumentofindAllCustom">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/tipodocumentofindAllCustom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tipodocumentofindById">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/tipodocumentofindById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tipodocumentoadd">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/tipodocumentoadd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tipodocumentoupdate">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/tipodocumentoupdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tipodocumentodelete">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/tipodocumentodelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tipodocumentoenable">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/tipodocumentoenable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tipodocumentosetCode">
+      <soap:operation soapAction="http://tempuri.org/IWCFCiberElectrik/tipodocumentosetCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WCFCiberElectrik">
+    <wsdl:port name="BasicHttpBinding_IWCFCiberElectrik" binding="tns:BasicHttpBinding_IWCFCiberElectrik">
+      <soap:address location="http://localhost:55062/WCFCiberElectrik.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

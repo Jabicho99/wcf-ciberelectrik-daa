@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="pe.com.ciberelectrik.bal/pe.com.ciberelectrik.bal.csproj" Id="dc4e0659-56b8-410f-b32c-586e2af355cf" />
+  <Project Path="pe.com.ciberelectrik.bo/pe.com.ciberelectrik.bo.csproj" Id="20fd4e9b-a67c-426b-b6ea-b26effde86d4" />
+  <Project Path="pe.com.ciberelectrik.dal/pe.com.ciberelectrik.dal.csproj" Id="3014e7b9-c4ae-4d15-a63e-1b2d1436761d" />
+  <Project Path="pe.com.ciberelectrik.ui/pe.com.ciberelectrik.ui.csproj" Id="6aef31e7-41a1-4712-9264-71f771eff49d" />
+  <Project Path="pe.com.ciberelectrik.wcf/pe.com.ciberelectrik.wcf.csproj" Id="27fc4625-3d94-462a-8581-40f45c2f5716" />
+</Solution>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DC4E0659-56B8-410F-B32C-586E2AF355CF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>pe.com.ciberelectrik.bal</RootNamespace>
+    <AssemblyName>pe.com.ciberelectrik.bal</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CategoriaBAL.cs" />
+    <Compile Include="DistritoBAL.cs" />
+    <Compile Include="RolBAL.cs" />
+    <Compile Include="TipoDocumentoBAL.cs" />
+    <Compile Include="SexoBAL.cs" />
+    <Compile Include="EstadoCivilBAL.cs" />
+    <Compile Include="EmpleadoBAL.cs" />
+    <Compile Include="ClienteBAL.cs" />
+    <Compile Include="MarcaBAL.cs" />
+    <Compile Include="ProductoBAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\pe.com.ciberelectrik.bo\pe.com.ciberelectrik.bo.csproj">
+      <Project>{20FD4E9B-A67C-426B-B6EA-B26EFFDE86D4}</Project>
+      <Name>pe.com.ciberelectrik.bo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\pe.com.ciberelectrik.dal\pe.com.ciberelectrik.dal.csproj">
+      <Project>{3014E7B9-C4AE-4D15-A63E-1B2D1436761D}</Project>
+      <Name>pe.com.ciberelectrik.dal</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

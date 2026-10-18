@@ -1,0 +1,17 @@
+## Visual Studio / .NET build artifacts
+[Bb]in/
+[Oo]bj/
+packages/
+*.user
+*.suo
+*.cache
+*.dll
+*.pdb
+
+## IIS Express / Visual Studio instance folders (machine-specific paths)
+.vs/
+vs/
+
+## Misc
+*.log
+Thumbs.db
